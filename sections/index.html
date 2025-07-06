@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  class="scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-300"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="../assest/icon.webp">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Foods Recipes</title>
+  </head>
+  <body
+    class="z-0  relative mx-auto max-w-6xl min-h-screen h-full w-full p-2.5 bg-[radial-gradient(circle_at_center,white,violet)] transition-all duration-500 ease-in-out"
+  >
+    <header
+      class="blured blur-none pointer-events-auto transition-all duration-300 ease-in-out relative w-full h-20 flex justify-between py-2.5 px-5 items-center mx-auto"
+    >
+      <a href="./index.html"
+        class="text-2xl text-white font-bold font-aleo cursor-pointer hover:-rotate-6 hover:scale-125 ease-in-out duration-500"
+      >
+        Foody<span class="text-blue-400">ME</span>
+      </a>
+      <div>
+        <div id="mobileM" class="flex sm:hidden cursor-pointer  justify-around items-center gap-2.5">
+          <i class="fa-solid fa-bars text-2xl text-emerald-800"></i>
+                  <i 
+          class="star fa-solid fa-star text-gray-50 text-xl duration-500 ease-in-out hover:text-yellow-300"
+        ></i>
+        </div>
+        <ul class=" hidden sm:flex justify-between items-center gap-5">
+          <li
+            class="font-overpass text-2xl text-indigo-500 mx-2 font-bold transition-all duration-500 ease-in-out"
+          >
+            <a href="./index.html">Home</a>
+          </li>
+          <li
+            class="font-overpass text-2xl text-gray-50 mx-2 font-bold transition-all duration-500 ease-in-out hover:text-indigo-500 hover:scale-110 hover:translate-y-2.5"
+          >
+            <a href="./about.html">About</a>
+          </li>
+          <li
+            class="font-overpass text-2xl text-gray-50 mx-2 font-bold transition-all duration-500 ease-in-out hover:text-indigo-500 hover:scale-110 hover:translate-y-2.5"
+          >
+            <a href="./contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div
+        class="hidden sm:flex w-20 p-2.5 cursor-pointer h-fit flex-nowrap justify-around items-center gap-2.5"
+      >
+        <i
+          id="srchBtn"
+          class="fa-solid fa-magnifying-glass text-xl duration-500 ease-in-out hover:text-yellow-300 hover:rotate-[360deg]"
+        ></i>
+        <i 
+          class="star fa-solid fa-star text-gray-50 text-xl duration-500 ease-in-out hover:text-yellow-300"
+        ></i>
+      </div>
+    </header>
+    <ul
+        class="mobMen fixed top-[15%] z-[99999999999999] left-[50%] -translate-x-1/2 w-[300px] h-fit p-5 rounded-2xl bg-white hidden flex-col gap-[5px]"
+      >
+        <li class="text-indigo-500 font-bold font-[system-ui]">
+          <a href="./index.html" class="w-full flex items-center gap-1"
+            ><i class="fa-solid fa-house text-xs"></i>Home</a
+          >
+        </li>
+        <li class="font-bold font-[system-ui]">
+          <a href="./about.html" class="w-full flex items-center gap-1"
+            ><i class="fa-solid fa-paperclip text-xs"></i>About</a
+          >
+        </li>
+        <li class="font-bold font-[system-ui]">
+          <a href="./contact.html" class="w-full flex items-center gap-1"
+            ><i class="fa-solid fa-address-book text-xs"></i>Contact</a
+          >
+        </li>
+      </ul>
+    <div class="fixed top-1 right-0 w-fit h-fit z-[99999999999999]" id="toast">
+
+    </div>
+    <div id="stars" class=" shadow-xl shadow-amber-200 bg-[radial-gradient(circle_at_center,white,violet)] hidden flex-col justify-around gap-2.5 items-center absolute top-[200px] z-10 left-[50%] -translate-x-[50%] -translate-y-[50%] bg-white border-[1px] border-violet-300 w-80 sm:w-xl md:w-2xl max-w-3xl h-80 overflow-y-scroll rounded-md transition-all duration-500 ease-in-out opacity-0">
+      <h1 class="font-aleo text-2xl text-black mt-2.5" >Favorites:</h1>
+      <div id="bards" class="relative w-full h-full flex flex-col justify-around items-center gap-5"></div>
+      <img id="closer" src="../assest/close.gif" alt="closeGif" class="absolute -top-0 right-0 w-10 cursor-pointer">
+    </div>
+    <div
+      id="container"
+      class="hidden w-[350px] max-h-[600px] overflow-y-scroll sm:w-xl md:w-3xl max-w-3xl shadow-2xl shadow-black rounded-2xl rounded-tr-md rounded-br-md z-[10000] h-[500px] p-2.5 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-cyan-400 flex-col justify-around items-center gap-2.5"
+    >
+      <div id="recipes" class="relative w-full h-fit p-2.5">
+        
+        </div>
+      </div>
+    </div>
+    <div
+      id="sEle"
+      class="blured blur-none pointer-events-auto  w-full h-[50px] sm:h-0 flex justify-center items-center overflow-hidden transition-all duration-500 ease-in-out"
+    >
+      <input
+        class="w-[300px] bg-white p-2.5 rounded-xl"
+        type="search"
+        name="searchbar"
+        id="searchbar"
+        placeholder="Search Here!"
+      />
+    </div>
+    <div
+      class="blured blur-none pointer-events-auto transition-all duration-500 ease-in-out w-full h-fit p-2.5 flex flex-wrap justify-around items-center gap-5 sm:gap-0"
+    >
+      <div
+        class="w-full sm:w-1/2 flex flex-col justify-around gap-1.5 sm:justify-around h-[280px] sm:h-[350px] mb-5 sm:mb-0"
+      >
+        <h1
+          class="text-4xl sm:text-5xl xl:text-7xl text-black font-overpass font-bold"
+        >
+          Quick and Tasty Recipies:
+        </h1>
+        <p
+          class="text-cyan-950 text-[17px] sm:text-xl font-extralight font-overpass"
+        >
+          Welcome Chef, It's like you're searching for a good recipies to cook,
+          do not worry we got you covered, we provide more then 300 recipies ,
+          what are you waiting go check it
+        </p>
+        <div class="w-full flex justify-center sm:justify-start items-center">
+          <a
+            href="./about.html"
+            class="px-2.5 py-2 text-white bg-violet-400 rounded-lg hover:shadow-lg shadow-violet-900 cursor-pointer transition-all duration-500 ease-in-out "
+            >Learn More About US</a
+          >
+        </div>
+      </div>
+      <div class="w-full sm:w-1/2 flex justify-center items-center relative">
+        <img class="w-3/5" src="../assest/kabsa.webp" alt="" />
+        <img
+          class="w-[150px] sm:w-[200px] bottom-0 left-0 sm:bottom-[-20px] sm:left-[-20px] xl:left-2.5 absolute z-[-1]"
+          src="../assest/tom.webp"
+          alt=""
+        />
+        <img
+          class="w-[150px] sm:w-[200px] top-0 right-0 sm:top-[-40px] sm:right-[-20px] xl:right-2.5 absolute z-[-1]"
+          src="../assest/chicken.webp"
+          alt=""
+        />
+        <img
+          class="w-4/5 sm:w-[400px] absolute z-[-2]"
+          src="../assest/leafs.webp"
+          alt=""
+        />
+      </div>
+    </div>
+    <div
+      class="blured blur-none pointer-events-auto transition-all duration-500 ease-in-out w-full h-fit flex flex-wrap justify-evenly items-center mt-10 mb-5 sm:mt-5 gap-5"
+    >
+      <div
+        class="relative w-[280px] h-fit p-2.5 text-left bg-violet-500/30 shadow-[0px_3px_15px_5px] sm:shadow-xl shadow-blue-600 rounded-bl-2xl rounded-tr-2xl hover:scale-105 hover:rotate-3 transition-all duration-500 ease-in-out"
+      >
+        <img
+          class="absolute w-[80px] top-[5%] left-0 drop-shadow-xl drop-shadow-black"
+          src="../assest/kabsa.webp"
+          alt="plat"
+        />
+        <div class="pl-[80px]">
+          <h1>Kabsa Dish</h1>
+          <p>Chicken | Rice | Spice</p>
+          <span
+            >4.5
+            <i
+              class="fa-solid fa-star text-yellow-300 text-sm duration-500 ease-in-out"
+            ></i
+          ></span>
+        </div>
+      </div>
+      <div
+        class="relative w-[280px] h-fit p-2.5 text-left bg-violet-500/30 shadow-[0px_0px_10px_5px] sm:shadow-xl shadow-blue-600 rounded-bl-2xl rounded-tr-2xl hover:scale-105 hover:rotate-3 transition-all duration-500 ease-in-out"
+      >
+        <img
+          class="absolute w-[65px] mt-1 ml-2 top-[5%] left-0 drop-shadow-xl drop-shadow-black"
+          src="../assest/steak.webp"
+          alt="plat"
+        />
+        <div class="pl-[80px]">
+          <h1>Steak Dish</h1>
+          <p>Steak | F.Herb| Limon</p>
+          <span
+            >4.5
+            <i
+              class="fa-solid fa-star text-yellow-300 text-sm duration-500 ease-in-out"
+            ></i
+          ></span>
+        </div>
+      </div>
+      <div
+        class="relative w-[280px] h-fit p-2.5 text-left bg-violet-500/30 shadow-[0px_0px_10px_5px] sm:shadow-xl shadow-blue-600 rounded-bl-2xl rounded-tr-2xl hover:scale-105 hover:rotate-3 transition-all duration-500 ease-in-out"
+      >
+        <img
+          class="absolute w-[60px] mt-1 ml-2 top-[5%] left-0 drop-shadow-xl drop-shadow-black"
+          src="../assest/sushi.webp"
+          alt="plat"
+        />
+        <div class="pl-[80px]">
+          <h1>Sushi Dish</h1>
+          <p>D.Fish | Rice | S.Soya</p>
+          <span
+            >4.5
+            <i
+              class="fa-solid fa-star text-yellow-300 text-sm duration-500 ease-in-out"
+            ></i
+          ></span>
+        </div>
+      </div>
+    </div>
+    <div
+      id="Recipes"
+      class="blured blur-none pointer-events-auto transition-all duration-500 ease-in-out hidden mt-5 w-full h-fit flex-col justify-center items-center"
+    >
+      <h1 class="text-4xl font-bold text-black sm:text-5xl md:text-6xl text-center">
+        Results:
+      </h1>
+      <div
+        id="cards"
+        class="w-full h-fit flex flex-wrap justify-around items-center p-2 gap-5 mt-2.5"
+      >
+    </div>
+    </div>
+    <script type="Module" src="../src/main.js"></script>
+    <script type="Module" src="../src/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="../assest/icon.webp" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./output.css" />
+    <title>About Us | FoodyME</title>
+  </head>
+  <body
+    class="z-0 relative mx-auto max-w-6xl min-h-screen h-full w-full p-2.5 bg-[radial-gradient(circle_at_center,white,violet)] transition-all duration-500 ease-in-out"
+  >
+    <header
+      class="blured blur-none pointer-events-auto transition-all duration-300 ease-in-out relative w-full h-20 flex justify-between py-2.5 px-5 items-center mx-auto"
+    >
+      <a
+        href="./index.html"
+        class="text-2xl text-white font-bold font-aleo cursor-pointer hover:-rotate-6 hover:scale-125 ease-in-out duration-500"
+      >
+        Foody<span class="text-blue-400">ME</span>
+      </a>
+      <div>
+        <div
+          id="mobileM"
+          class="flex sm:hidden cursor-pointer justify-around items-center gap-2.5"
+        >
+          <i class="fa-solid fa-bars text-2xl text-emerald-800"></i>
+        </div>
+        <ul class="hidden sm:flex justify-between items-center gap-5">
+          <li
+            class="font-overpass text-2xl text-gray-50 mx-2 font-bold transition-all duration-500 ease-in-out hover:text-indigo-500 hover:scale-110 hover:translate-y-2.5"
+          >
+            <a href="./index.html">Home</a>
+          </li>
+          <li
+            class="font-overpass text-2xl text-indigo-500 mx-2 font-bold transition-all duration-500 ease-in-out"
+          >
+            <a href="./about.html">About</a>
+          </li>
+          <li
+            class="font-overpass text-2xl text-gray-50 mx-2 font-bold transition-all duration-500 ease-in-out hover:text-indigo-500 hover:scale-110 hover:translate-y-2.5"
+          >
+            <a href="./contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="hidden sm:flex w-20 p-2.5 cursor-pointer h-fit flex-nowrap justify-around items-center gap-2.5"
+      ></div>
+    </header>
+    <ul
+      class="mobMen fixed top-[15%] z-[99999999999999] left-[50%] -translate-x-1/2 w-[300px] h-fit p-5 rounded-2xl bg-white hidden flex-col gap-[5px]"
+    >
+      <li class="font-bold font-[system-ui]">
+        <a href="./index.html" class="w-full flex items-center gap-1"
+          ><i class="fa-solid fa-house text-xs"></i>Home</a
+        >
+      </li>
+      <li class="text-indigo-500 font-bold font-[system-ui]">
+        <a href="./about.html" class="w-full flex items-center gap-1"
+          ><i class="fa-solid fa-paperclip text-xs"></i>About</a
+        >
+      </li>
+      <li class="font-bold font-[system-ui]">
+        <a href="./contact.html" class="w-full flex items-center gap-1"
+          ><i class="fa-solid fa-address-book text-xs"></i>Contact</a
+        >
+      </li>
+    </ul>
+    <div
+      class="w-full h-fit flex flex-col justify-start items-center gap-5 mt-5"
+    >
+      <h1
+        class="text-xl sm:text-3xl text-blue-500 font-bold font-aleo border-b-2 border-blue-500 self-start"
+      >
+        What is FoodyME :
+      </h1>
+      <p class="text-base sm:text-lg text-gray-950/80 font-overpass p-2.5">
+        Whether you're a beginner in the kitchen or a seasoned home chef, our
+        site offers easy-to-follow, tested recipes from around the world —
+        including local favorites. We focus on quality, simplicity, and flavor.
+        With quick filters, mobile-friendly access, and the ability to save your
+        favorite dishes, we make sure cooking feels as enjoyable as eating.
+      </p>
+    </div>
+    <div
+      class="w-full h-fit flex flex-col justify-start items-center gap-5 mt-5"
+    >
+      <h1
+        class="text-xl sm:text-3xl text-blue-500 font-bold font-aleo border-b-2 border-blue-500 self-start"
+      >
+        What You need to know:
+      </h1>
+      <p class="text-lg text-indigo-800/90 font-overpass self-start">
+        Welcome to our recipe haven! Here's what makes your experience here
+        deliciously smooth:
+      </p>
+      <ul
+        class="text-lg sm:text-2xl text-start text-gray-900/80 font-overpass flex flex-col max-w-2xl md:mr-40"
+      >
+        <li class="">
+          <img
+            class="w-6 sm:w-7 md:w-8 float-left sm:mt-0"
+            src="../assest/cook.webp"
+            alt="cook"
+          /><span
+            class="text-yellow-700 font-extrabold text-sm sm:text-base md:text-xl"
+            >Tried & Tested Recipes:</span
+          >
+          <span class="text-sm sm:text-base text-gray-950"
+            >Every dish is cooked, tasted, and perfected — no random copy-paste
+            stuff here!</span
+          >
+        </li>
+        <li class="">
+          <img
+            class="w-6 sm:w-7 md:w-8 float-left sm:mt-0"
+            src="../assest/earth.webp"
+            alt="cook"
+          /><span
+            class="text-blue-400 font-extrabold text-sm sm:text-base md:text-xl"
+            >Culturally Rich Dishes:</span
+          >
+          <span class="text-sm sm:text-base text-gray-950"
+            >From Algerian classics to global favorites — discover something new
+            every time.</span
+          >
+        </li>
+        <li class="">
+          <img
+            class="w-6 sm:w-7 md:w-8 float-left sm:mt-0"
+            src="../assest/save.webp"
+            alt="cook"
+          /><span
+            class="text-orange-400 font-extrabold text-sm sm:text-base md:text-xl"
+            >Save Your Favorites:</span
+          >
+          <span class="text-sm sm:text-base text-gray-950"
+            >Create your own collection of loved recipes — one tap, saved
+            forever.</span
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="w-full h-fit mb-5">
+      <h1
+        class="self-start text-xl sm:text-3xl text-blue-500 border-b-2 border-blue-500 w-fit font-bold font-aleo"
+      >
+        We aim to :
+      </h1>
+      <p class="text-base sm:text-lg text-gray-950/80 font-overpass p-2.5">
+        make cooking easier, more enjoyable, and accessible to everyone by
+        sharing authentic, delicious recipes you can trust no fluff, just real
+        food made simple. Whether you're a beginner or a passionate food lover,
+        there's always something for you here. If you want to join us, Contact
+        Us and Do not hesitate:
+      </p>
+      <div class="w-full h-fit text-center">
+        <a
+          class="relative w-fit px-5 py-2.5 rounded-lg border-white border-3 z-[1] bg-gray-900/80 font-bold hover:bg-transparent after:bg-linear-[120deg,#A6B1E1,#CACFD6,#CACFD6,#424874] after:content-[''] after:absolute after:inset-0 after:rounded-lg after:z-[-1] after:transition-all after:duration-500 after:-top-0.5 after:-left-0.5 after:w-[calc(100%+4px)] after:h-[calc(100%+4px)] after:animate-glows after:bg-size-[600%] font-overpass duration-500 ease-in-out transition-all text-center text-white"
+          href="./contact.html#contacting"
+          >Get in Touch</a
+        >
+      </div>
+    </div>
+    <script type="module" src="../src/app.js"></script>
+  </body>
+</html>
+
+<!-- 101828 -->

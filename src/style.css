@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-aleo: "Aleo", serif;
+  --font-overpass: "Overpass", sans-serif;
+  --animate-taosted: toasted 0.8s ease-in forwards;
+  --animate-progress: prog 6s ease-in-out linear;
+  --animate-glows: glows 20s ease-in-out infinite;
+}
+::-webkit-scrollbar {
+  background: white;
+  width: 4px;
+  border-radius: 20px;
+  height: fit-content;
+}
+
+::-webkit-scrollbar-thumb {
+  background: violet;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 20px;
+}
+.toasty::before {
+  position: absolute;
+  content: "";
+  bottom: 1px;
+  left: 0px;
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+}
+
+.toasty.success::before {
+  background-color: rgb(28, 237, 28);
+  box-shadow: 0px 0px 5px 2px rgb(28, 237, 28);
+  animation: prog 6s ease-in-out;
+}
+
+.toasty.removed::before {
+  background-color: rgb(36, 138, 255);
+  box-shadow: 0px 0px 5px 2px rgb(28, 94, 237);
+  animation: prog 6s ease-in-out;
+}
+
+@keyframes toasted {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes glows {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@keyframes prog {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
