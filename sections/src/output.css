@@ -383,9 +383,6 @@
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
   }
-  .ml-1 {
-    margin-left: calc(var(--spacing) * 1);
-  }
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
   }
@@ -514,9 +511,6 @@
   }
   .w-\[65px\] {
     width: 65px;
-  }
-  .w-\[70px\] {
-    width: 70px;
   }
   .w-\[80px\] {
     width: 80px;
@@ -817,11 +811,23 @@
   .bg-\[radial-gradient\(circle_at_center\,white\,violet\)\] {
     background-image: radial-gradient(circle at center,white,violet);
   }
-  .bg-\[url\(\'\.\.\/assest\/contact\.jpg\'\)\] {
-    background-image: url('../assest/contact.jpg');
+  .bg-\[url\(\'\.\/assest\/contact\.jpg\'\)\] {
+    background-image: url('./assest/contact.jpg');
   }
-  .bg-\[url\(\'\.\.\/assest\/contact\.webp\'\)\] {
-    background-image: url('../assest/contact.webp');
+  .bg-\[url\(\'\.\/assest\/contact\.png\'\)\] {
+    background-image: url('./assest/contact.png');
+  }
+  .bg-\[url\(\.\/assest\/contact\.jpg\)\] {
+    background-image: url(./assest/contact.jpg);
+  }
+  .bg-\[url\(\.\/assest\/contact\.webp\)\] {
+    background-image: url(./assest/contact.webp);
+  }
+  .bg-\[url\(\/assest\/contact\.jpg\)\] {
+    background-image: url(/assest/contact.jpg);
+  }
+  .bg-\[url\(\/assest\/contact\.webp\)\] {
+    background-image: url(/assest/contact.webp);
   }
   .from-blue-400 {
     --tw-gradient-from: var(--color-blue-400);
@@ -1876,14 +1882,34 @@
       gap: calc(var(--spacing) * 0);
     }
   }
-  .sm\:bg-\[url\(\.\.\/assest\/contact3\.jpg\)\] {
+  .sm\:bg-\[url\(\'\.\/assest\/contact3\.jpg\'\)\] {
     @media (width >= 40rem) {
-      background-image: url(../assest/contact3.jpg);
+      background-image: url('./assest/contact3.jpg');
     }
   }
-  .sm\:bg-\[url\(\.\.\/assest\/contact3\.webp\)\] {
+  .sm\:bg-\[url\(\'\.\/assest\/contact3\.png\'\)\] {
     @media (width >= 40rem) {
-      background-image: url(../assest/contact3.webp);
+      background-image: url('./assest/contact3.png');
+    }
+  }
+  .sm\:bg-\[url\(\.\/assest\/contact3\.jpg\)\] {
+    @media (width >= 40rem) {
+      background-image: url(./assest/contact3.jpg);
+    }
+  }
+  .sm\:bg-\[url\(\.\/assest\/contact3\.webp\)\] {
+    @media (width >= 40rem) {
+      background-image: url(./assest/contact3.webp);
+    }
+  }
+  .sm\:bg-\[url\(\/assest\/contact3\.jpg\)\] {
+    @media (width >= 40rem) {
+      background-image: url(/assest/contact3.jpg);
+    }
+  }
+  .sm\:bg-\[url\(\/assest\/contact3\.webp\)\] {
+    @media (width >= 40rem) {
+      background-image: url(/assest/contact3.webp);
     }
   }
   .sm\:p-0 {
