@@ -191,8 +191,8 @@ srchBar.addEventListener("change", (e) => {
         <div class="flex flex-wrap justify-around items-center mt-2.5">
             ${
               isFavorite
-                ? `<button id="rem" data-name="${element.strMeal}" class="hover:shadow-[0px_2px_12px_3px_mistyrose] cursor-pointer hover:text-orange-300 transition-all ease-in-out duration-500 flex justify-center gap-1.5 items-center w-[45%] sm:text-xl text-center px-1.5 py-2.5 rounded-xl bg-blue-200 text-sm text-white">Remove <img class="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 place-content-center" src="../assest/delete.gif" alt="remove">`
-                : `<button id="fav" class="hover:shadow-[0px_2px_12px_3px_mistyrose] cursor-pointer hover:text-orange-300 transition-all ease-in-out duration-500 flex justify-center gap-1.5 items-center w-[45%] sm:text-xl text-center px-1.5 py-2.5 rounded-xl bg-blue-200 text-sm text-white">Add to favorite <img class="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 place-content-center" src="../assest/menu.gif" alt="fav">`
+                ? `<button id="rem" data-name="${element.strMeal}" class="hover:shadow-[0px_2px_12px_3px_mistyrose] cursor-pointer hover:text-orange-300 transition-all ease-in-out duration-500 flex justify-center gap-1.5 items-center w-[45%] sm:text-xl text-center px-1.5 py-2.5 rounded-xl bg-blue-200 text-sm text-white">Remove <img class="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 place-content-center" src="./assest/delete.gif" alt="remove">`
+                : `<button id="fav" class="hover:shadow-[0px_2px_12px_3px_mistyrose] cursor-pointer hover:text-orange-300 transition-all ease-in-out duration-500 flex justify-center gap-1.5 items-center w-[45%] sm:text-xl text-center px-1.5 py-2.5 rounded-xl bg-blue-200 text-sm text-white">Add to favorite <img class="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 place-content-center" src="./assest/menu.gif" alt="fav">`
             }
           </button>
           <a
@@ -200,7 +200,7 @@ srchBar.addEventListener("change", (e) => {
             class="hover:shadow-[0px_2px_12px_3px_rosybrown] hover:text-rose-500 transition-all ease-in-out duration-500 flex justify-center gap-1.5 items-center w-[45%] sm:text-xl text-center px-1.5 py-2.5 rounded-xl bg-blue-200 text-sm text-white"
             >See How?                         <img
               class="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 place-content-center"
-              src="../assest/YT.gif"
+              src="./assest/YT.gif"
               alt="favorite"
             /></a
           >
@@ -232,7 +232,7 @@ srchBar.addEventListener("change", (e) => {
       } else {
         cards.innerHTML = `<div class="w-full h-fit flex flex-col justify-center items-center gap-2.5">
       <h1 class="text-xl sm:text-3xl font-aleo text-gray-900/80 font-medium">Sorry We did not found any Results:</h1>
-      <img class="w-96" src="../assest/empty2.gif" alt="">
+      <img class="w-96" src="./assest/empty2.gif" alt="">
       </div>`;
       }
     });
@@ -266,14 +266,14 @@ function addOrRem(butto, favs, item) {
     }
     butto.innerHTML = `Remove <img
               class="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 place-content-center"
-              src="../assest/delete.gif"
+              src="./assest/delete.gif"
               alt="favorite"
             />`;
     isTst = true;
     toast(isTst);
   } else {
     butto.innerHTML =
-      'Add to favorite <img class="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 place-content-center" src="../assest/menu.gif" alt="fav">';
+      'Add to favorite <img class="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 place-content-center" src="./assest/menu.gif" alt="fav">';
     remove(item.name);
   }
 }
@@ -316,7 +316,7 @@ function check() {
       checking.forEach((e) => {
         document.getElementById(
           "bards"
-        ).innerHTML += `<div class="view flex flex-row flex-nowrap justify-around items-center w-[90%] h-[90px] sm:h-28 p-2.5 rounded-[10px] bg-violet-500/30 shadow-[0px_0px_10px_5px] sm:shadow-xl shadow-blue-600/40"><img src="${e.src}" alt="Chicken Congee Image" class="w-[50px] sm:w-[90px] rounded-xl border-2 border-black hover:scale-105 transition-all duration-500 ease-in-out"><h1 class="text-sm sm:text-2xl text-black text-center font-[system-ui]">${e.name}</h1><button data-name="${e.name}" class="remo flex items-center justify-center text-white px-2.5 py-1.5 sm:w-[100px] rounded-[8px] bg-indigo-300 cursor-pointer shadow-black shadow-[0px_0px_5px_1px] transition-all duration-500 ease-in-out hover:scale-110">Remove<img class="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 place-content-center" src="../assest/delete.gif" alt="remove"></button></div>`;
+        ).innerHTML += `<div class="view flex flex-row flex-nowrap justify-around items-center w-[90%] h-[90px] sm:h-28 p-2.5 rounded-[10px] bg-violet-500/30 shadow-[0px_0px_10px_5px] sm:shadow-xl shadow-blue-600/40"><img src="${e.src}" alt="Chicken Congee Image" class="w-[50px] sm:w-[90px] rounded-xl border-2 border-black hover:scale-105 transition-all duration-500 ease-in-out"><h1 class="text-sm sm:text-2xl text-black text-center font-[system-ui]">${e.name}</h1><button data-name="${e.name}" class="remo flex items-center justify-center text-white px-2.5 py-1.5 sm:w-[100px] rounded-[8px] bg-indigo-300 cursor-pointer shadow-black shadow-[0px_0px_5px_1px] transition-all duration-500 ease-in-out hover:scale-110">Remove<img class="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 place-content-center" src="./assest/delete.gif" alt="remove"></button></div>`;
       });
       document.querySelectorAll(".remo").forEach((r) => {
         r.addEventListener("click", () => {
@@ -335,7 +335,7 @@ function check() {
           console.log("second condi");
           document.getElementById(
             "bards"
-          ).innerHTML += `<div class="view flex flex-row flex-nowrap justify-around items-center w-[90%] h-[90px] sm:h-28 p-2.5 rounded-[10px] bg-violet-500/30 shadow-[0px_0px_10px_5px] sm:shadow-xl shadow-blue-600/40"><img src="${e.src}" alt="Chicken Congee Image" class="w-[50px] sm:w-[90px] rounded-xl border-2 border-black hover:scale-105 transition-all duration-500 ease-in-out"><h1 class="text-sm sm:text-2xl text-black text-center font-[system-ui]">${e.name}</h1><button class="remo flex items-center justify-center text-white px-2.5 py-1.5 sm:w-[100px] rounded-[8px] bg-indigo-300 cursor-pointer shadow-black shadow-[0px_0px_5px_1px] transition-all duration-500 ease-in-out hover:scale-110">Remove<img class="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 place-content-center" src="../assest/delete.gif" alt="remove"></button></div>`;
+          ).innerHTML += `<div class="view flex flex-row flex-nowrap justify-around items-center w-[90%] h-[90px] sm:h-28 p-2.5 rounded-[10px] bg-violet-500/30 shadow-[0px_0px_10px_5px] sm:shadow-xl shadow-blue-600/40"><img src="${e.src}" alt="Chicken Congee Image" class="w-[50px] sm:w-[90px] rounded-xl border-2 border-black hover:scale-105 transition-all duration-500 ease-in-out"><h1 class="text-sm sm:text-2xl text-black text-center font-[system-ui]">${e.name}</h1><button class="remo flex items-center justify-center text-white px-2.5 py-1.5 sm:w-[100px] rounded-[8px] bg-indigo-300 cursor-pointer shadow-black shadow-[0px_0px_5px_1px] transition-all duration-500 ease-in-out hover:scale-110">Remove<img class="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 place-content-center" src="./assest/delete.gif" alt="remove"></button></div>`;
         }
         document.querySelectorAll(".remo").forEach((r) => {
           r.addEventListener("click", () => {
@@ -352,7 +352,7 @@ function check() {
       "bards"
     ).innerHTML = `<div class="w-full h-full flex flex-col items-center justify-center">
     <h4 class="font-overpass text-base sm:text-lg text-cyan-950 text-center" >Sorry but We Did not Found any favorites</h4>
-    <img src="../assest/newon.gif" class= "w-60" alt="nothingGif"/>
+    <img src="./assest/newon.gif" class= "w-60" alt="nothingGif"/>
     </div>`;
   }
 }
